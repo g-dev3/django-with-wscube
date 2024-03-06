@@ -1,7 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
-def aboutUs(request):
-    return HttpResponse("Welcome to G Developer")
+def homePage(request):
+    return render(request,"index.html")
 
 
 def gfolder(request):

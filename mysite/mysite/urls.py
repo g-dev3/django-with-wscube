@@ -20,7 +20,8 @@ from mysite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about-us/',views.aboutUs),
+    path('',views.homePage),
     path('gdev/',views.gfolder),
-    path('gdev/<slug:gdevid>',views.gfile)
+    path('gdev/<slug:gdevid>',views.gfile),
+
 ]
