@@ -8,10 +8,14 @@
         body{
             background-color: black;
             font-family: Arial, Helvetica, sans-serif;
-        }
-        p{
             color: white;
             font-size: 25px;
+        }
+        table, th,td{
+            border: 1px solid white;
+        }
+        th,td{
+            padding: 10px;
         }
     </style>
 </head>
@@ -19,6 +23,28 @@
     <p>Welcome to {{bdata}}.</p>
     <p>My Course's</p>
     <p>{{clist}}</p>
+    {% for n in clist %}
+    <div>{{forloop.counter}}. {{n}}</div>
+    {% endfor %}
+
     
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in student_details %}
+            <tr>
+                <td>{{d.name}}</td>
+                <td>{{d.age}}</td>
+                <td>{{d.phone}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
