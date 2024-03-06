@@ -21,7 +21,7 @@ from mysite import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.homePage),
-    path('gdev/',views.gfolder),
+    path('about-us/',views.aboutUs),
     path('gdev/<slug:gdevid>',views.gfile),
 
 ]

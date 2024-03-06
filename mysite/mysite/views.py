@@ -4,6 +4,7 @@ from django.shortcuts import render
 def homePage(request):
     data={
         'title': 'Home Page',
+        'title1': 'About us',
         'bdata':'G Developer site...',
         'clist': ['Html','Css','Javascript','C','Python','Django','MySQL','Git','Github','Ms-excel'],
         'student_details':[
@@ -12,13 +13,15 @@ def homePage(request):
             {'name':'Jasmin','age':18,'phone':9988667733},
             {'name':'Kaniya','age':24,'phone':8877755999},
             {'name':'Robin 2','age':20,'phone':9988544444},
-        ]
+        ],
+        'numbers':[]
+        # 10,20,30,40,50
     }
     return render(request,"index.html",data)
 
 
-def gfolder(request):
-    return HttpResponse("Wel-come to G folder...")
+def aboutUs(request):
+    return render(request,'about-us.html')
 
 
 def gfile(request,gdevid):
