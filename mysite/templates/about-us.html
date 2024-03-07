@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +7,8 @@
     <title>{{title1}}</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
-<body>
+<body> -->
+    {% include "header.html" %}
     <p>Welcome to {{bdata}}.</p>
     <p>My Course's</p>
     <p>{{clist}}</p>
@@ -55,5 +56,5 @@
 <p>
     <a href="/">Back to Home page</a>
 </p>
-</body>
-</html>
+
+{% include "footer.html" %}
