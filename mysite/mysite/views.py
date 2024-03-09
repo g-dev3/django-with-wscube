@@ -32,3 +32,4 @@ def profileCard(request):
 
 def gfile(request,gdevid):
     return HttpResponse(gdevid)
+

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
-    {% load static %}
-    {% block contant %}
+{% load static %}
+{% block contant %}
+{% include 'nav-bar.html' %}
+    <p>About Me...</p>
     <p>Welcome to {{bdata}}.</p>
     <p>My Course's</p>
     <p>{{clist}}</p>

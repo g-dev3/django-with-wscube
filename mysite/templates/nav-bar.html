@@ -1,0 +1,33 @@
+<style>
+    ul{
+        display: flex;  
+        margin-right: 12px;
+        list-style: none;
+    }
+    li{
+        margin:0  100px;
+    }
+    .active a{
+        background: red;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+</style>
+<div>
+    <ul>
+        {% url 'about' as about %}
+
+        <li class="{% if request.path == '/' %} active {% endif %}">
+            <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="{% if request.path == about %} active {% endif %}">
+            <a href="{{about}}">About us</a><br>
+        </li>
+        <li>
+            <a href="{% url 'profile-card' %}">Project</a>
+        </li>
+    </ul>
+</div>
+
