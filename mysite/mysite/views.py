@@ -24,5 +24,10 @@ def aboutUs(request):
     return render(request,'about-us.html')
 
 
+def profileCard(request):
+    return render(request,'index1.html')
+
+
+
 def gfile(request,gdevid):
     return HttpResponse(gdevid)
