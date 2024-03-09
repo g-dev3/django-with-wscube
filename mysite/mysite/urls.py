@@ -20,8 +20,8 @@ from mysite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.homePage),
-    path('about-us/',views.aboutUs),
-    path('gdev/<slug:gdevid>',views.gfile),
-    path('profile-card/',views.profileCard)
+    path('',views.homePage, name = 'home'),
+    path('about-us/',views.aboutUs,name = 'about'),
+    path('gdev/<slug:gdevid>',views.gfile,name= 'gfile'),
+    path('profile-card/',views.profileCard,name = 'profile-card')
 ]

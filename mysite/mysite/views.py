@@ -1,8 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def homePage(request):
-    data={
+data={
         'title': 'Home Page',
         'title1': 'About us',
         'bdata':'G Developer site...',
@@ -17,11 +16,13 @@ def homePage(request):
         'numbers':[]
         # 10,20,30,40,50
     }
+def homePage(request):
+    
     return render(request,"index.html",data)
 
 
 def aboutUs(request):
-    return render(request,'about-us.html')
+    return render(request,'about-us.html',data)
 
 
 def profileCard(request):

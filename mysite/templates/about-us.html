@@ -1,14 +1,6 @@
-<!-- {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title1}}</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body> -->
-    {% include "header.html" %}
+{% extends 'base.html' %}
+    {% load static %}
+    {% block contant %}
     <p>Welcome to {{bdata}}.</p>
     <p>My Course's</p>
     <p>{{clist}}</p>
@@ -54,7 +46,7 @@
 
 
 <p>
-    <a href="/">Back to Home page</a>
+    <a href="{% url 'home' %}">Back to Home page</a>
 </p>
 
-{% include "footer.html" %}
+{% endblock %}
