@@ -36,12 +36,20 @@ def gfile(request,gdevid):
 
 def userForm(request):
     formdata=0
+    fdata={}
     try:
+        if request.method == "POST":
         # n1 = int(request.GET['num1'])
         # n2 = int(request.GET['num2'])
-        n1 = int(request.GET.get('num1'))
-        n2 = int(request.GET.get('num2'))
-        formdata = n1 + n2
+            n1 = int(request.POST.get('num1'))
+            n2 = int(request.POST.get('num2'))
+            formdata = n1 + n2
+            fdata={
+                'n1':n1,
+                'n2':n2,
+                'output':formdata
+            }
+            
     except:
         pass
-    return render(request,'form.html',{'output':formdata})
+    return render(request,'form.html',fdata)

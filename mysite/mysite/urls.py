@@ -24,5 +24,5 @@ urlpatterns = [
     path('about-us/',views.aboutUs,name = 'about'),
     path('gdev/<slug:gdevid>',views.gfile,name= 'gfile'),
     path('profile-card/',views.profileCard,name = 'profile-card'),
-    path('form/',views.userForm,name='form')
+    path('form/',views.userForm,name = 'form')
 ]
