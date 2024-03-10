@@ -33,3 +33,15 @@ def profileCard(request):
 def gfile(request,gdevid):
     return HttpResponse(gdevid)
 
+
+def userForm(request):
+    formdata=0
+    try:
+        # n1 = int(request.GET['num1'])
+        # n2 = int(request.GET['num2'])
+        n1 = int(request.GET.get('num1'))
+        n2 = int(request.GET.get('num2'))
+        formdata = n1 + n2
+    except:
+        pass
+    return render(request,'form.html',{'output':formdata})
